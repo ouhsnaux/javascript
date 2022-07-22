@@ -1,0 +1,24 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs --open --host localhost",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouhsnaux/javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ouhsnaux/javascript/issues"
+  },
+  "homepage": "https://github.com/ouhsnaux/javascript#readme",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
