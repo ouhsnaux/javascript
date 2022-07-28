@@ -10,13 +10,9 @@
 
 * ECMAScript
   * 语法
-  * 变量，声明和作用域
-  * 数据类型
     * 基础
-    * 内置
-      * 正则
-      * 函数，闭包
-  * 操作符
+    * 变量
+    * 作用域
   * 流程控制
     * if/else/switch
     * for/while
@@ -26,12 +22,27 @@
     * async/await
     * web worker
     * 事件循环，宏任务微任务
-  * 面向对象，类
-* BOM
-  * window
+  * 数据类型
+    * 函数，闭包
+    * 内置对象与函数
+      * JSON,Math,Array,正则
+  * 错误处理
+  * 原型机制
+  * 严格模式
+  * 模块系统
+  * 基础内存模型
+* Web API
+  * [window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
   * date
   * navigator
   * storage
   * postMessage
-* DOM
+  * [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+  * [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+  * setTimeout, setInterval
+  * XMLHttpRequest, fetch
+  * WebWorker
+  * WebSockets
+  * Canvas
+  * WebAssembly
 * 安全
