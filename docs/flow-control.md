@@ -58,3 +58,26 @@ worker内容必须写在一个独立的js文件中
       console.log(message);
     })
     ```
+
+### 子线程
+
+1. 开始执行，通过 `message` 事件，被主线程调用时触发
+2. 使用 `postMessage` 通知主线程，并返回结果
+
+```js
+addEventListener('message', (message) => {
+  // 主线程传入的参数作为 message.data，此处使用 `command` 区分类型
+  if (message.data.command === 'generate') {
+    generate(message.data.quota);
+  }
+})
+
+function generate(quota) {
+  // 执行大量计算
+  const result = calculate(quota);
+  // 计算结束后通知主线程
+  postMessage(result)
+}
+```
+
+2. 返回
