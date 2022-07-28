@@ -12,8 +12,9 @@
 ### 方法
 
 * `indexOf, lastIndexOf, includes, startsWith, endsWith`
-* `match, matchAll, replace, replaceAll, search, split` 都可以使用正则
+* `match, matchAll, replace, replaceAll, split` 都可以使用正则
 * `substring, slice, trim`, slice可以用正则
+* `search` 使用正则搜索下标
 * `charAt, charCodeAt, []`
 * `split, join`
 * `concat, padStart, padEnd, repeat`
@@ -23,7 +24,30 @@
 
 * 进制，`0o, 0x, 0b`
 * 浮点数精度丢失
-* NaN, isNaN(), Number.isNaN()
+
+### 常量
+
+* Number.EPSILON
+* NaN
+* Infinity, -Infinity
+
+### 静态方法
+
+* parseInt, parseFloat
+* isInteger
+* isNaN, 是否Number.NaN, 而window.isNaN判断是否非数字
+
+### 实例方法
+
+* toExponential()
+* toFixed()
+* toPrecision()
+
+### Math方法
+
+* 三角函数
+* Math.random()
+* Math.floor, Math.ceil, Math.round
 
 ## Boolean
 
@@ -31,7 +55,7 @@
 
 ## BigInt
 
-`9007199254740992n`
+`9007199254740992n`，不能与number一起运算
 
 ## Symbol
 
@@ -48,5 +72,7 @@
 `+, Number, parseInt, parseFloat`
 
 `!, !!`
+
+使用 `BigInt(number)` 转换
 
 ## 包装对象

@@ -2,6 +2,7 @@
 
 使用 `length` 获取数组长度，长度可变，每个元素的类型无限制，可各不相同，第一个元素的下标是0
 `[,,]` 会创建 empty，数组遍历方法会跳过
+`?.[1]`
 
 ## 方法
 
@@ -17,3 +18,13 @@
 * `reverse, sort`
 * `slice, splice`
 * `entries, keys, values`
+
+## Array like
+
+* arguments
+* NodeList
+
+## 二进制
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays>
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer>

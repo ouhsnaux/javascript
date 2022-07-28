@@ -1,9 +1,12 @@
 # Object
 
-## 属性
+## 属性操作
 
-`obj.b, obj[expression], obj?.b, var { b } = obj`
-`delete obj.b`
+* `obj.b`
+* `obj[expression]`
+* `obj?.b`
+* `var { b } = obj`
+* `delete obj.b`
 
 ## 方法
 

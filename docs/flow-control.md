@@ -1,20 +1,30 @@
 # 流程控制
 
-## 逻辑判断
+## 逻辑判断 和循环
 
 * `if, else, else if`
+* `switch case`
 * `?:`
-
-## 循环
 
 * `while`
 * `for`
+* `for...in` 遍历所有可枚举属性，包括原型链
+* `for...of` 遍历含有iterator的对象
+
+* `break, continue`
 
 ## 事件回调
 
 * 事件捕获，事件冒泡
 * 事件委托
 * `preventDefault, stopPropagation`
+
+## 错误
+
+* `throw`
+* `try {} catch (e) {} finally {}`
+
+finally一定会执行，即使try catch中有return
 
 ## Promise
 
