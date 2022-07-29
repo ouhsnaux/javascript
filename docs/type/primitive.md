@@ -76,3 +76,8 @@
 使用 `BigInt(number)` 转换
 
 ## 包装对象
+
+## 类型检测
+
+* typeof
+* Object.prototype.toString.call()

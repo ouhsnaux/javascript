@@ -4,3 +4,5 @@
 * `try {} catch (e) {} finally {}`
 
 * `error.name, error.message`
+
+* `unhandledrejection`

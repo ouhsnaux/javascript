@@ -35,6 +35,13 @@ finally一定会执行，即使try catch中有return
 * 构造函数的参数为一个函数，该函数包含两个参数，同样为函数
   * `resolve(data)` 调用时将状态改为 `fulfilled` 并返回data
   * `reject(err)` 调用时将状态改为 `rejected` 并返回错误信息
+* 事件
+  * `rejectionhandled`
+  * `unhandledrejection`
+
+* `Promise.then` 不会立即执行，而是创建微任务，微任务的目的就是插队。
+
+`queueMicrotask(() => {})` 添加微任务
 
 ## async/await
 
@@ -91,3 +98,35 @@ function generate(quota) {
 ```
 
 2. 返回
+
+## 前端执行机制
+
+任务队列插入任务的情况
+
+* 程序开始执行
+* setTimeout/setInterval
+* 事件触发
+
+事件循环机制
+
+* 执行事件队列的第一个
+* 执行完毕后执行微任务队列的 所有任务
+* requestAnimationFrame
+* 排列和渲染
+* 执行事件队列的下一个
+
+三种事件循环，window, worker, worklet
+
+## Iterator
+
+{
+  next() {
+    return { done, value }
+  }
+}
+
+## generator
+
+function* generatorFunc() { yield xxx; }
+
+next传值为yield接受值

@@ -24,7 +24,7 @@
 * arguments
 * NodeList
 
-## 二进制
+## Typed Array
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays>
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer>

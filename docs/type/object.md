@@ -1,6 +1,8 @@
 # Object
 
-## 属性操作
+## 属性
+
+属性名的类型只能是 `string, symbol`
 
 * `obj.b`
 * `obj[expression]`
@@ -11,6 +13,24 @@
 ## 方法
 
 ## 修饰符
+
+* `value, writable`
+* `getter, setter`
+* `enumerable, configurable`
+
+```js
+const myObj = {
+  a: 7,
+  get b() {
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2;
+  }
+};
+```
+
+`Object.defineProperties`
 
 ## 对象的创建
 
@@ -40,6 +60,8 @@
 
 访问对象的属性，如果对象中不包含该属性，会从原型对象中查找，如果仍没有，会到原型对象的原型对象中查找，直到找到该属性或遍历到顶级原型对象。这就是原型链。
 
+set时，可以调用原型对象的set导致更改数据
+
 ### 设置原型对象
 
 * `Object.setPrototypeOf()` 修改对象的原型对象
@@ -58,7 +80,7 @@
 
 ## class
 
-类声明
+类声明，不会提升
 
 ```js
 // 使用class声明类
@@ -116,8 +138,51 @@ class Student extends Person {
 }
 ```
 
+* `#` 表示私有
+* `static` 表示静态，甚至可以添加静态块（立即执行函数）
+
+### 7个属性和方法
+
+```js
+class Person() {
+   // 私有属性
+   #age = 1;
+   constructor(name) {
+      // 实例属性
+      this.name = name;
+      // 实例方法
+      this.say = () => { console.log(this.name) }
+   }
+   // 原型方法
+   say() {
+      console.log(this.name);
+   }
+   // 静态属性
+   static type = 'yellow',
+   // 静态方法
+   static say(p) {
+      console.log(`My name is ${p.name}`);
+   }
+}
+```
+
 ## 原型链继承
+
+## 遍历
+
+* `Object.keys, Object.getOwnPropertyNames, Object.getOwnPropertySymbols`
+* `for in`
+* `for of`
+
+遍历顺序：
+
+1. 正整数，按照数字大小排列
+2. 其它根据插入顺序
 
 ## JSON
 
 <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes>
+
+## Iterable
+
+包含 `Symbol.iterator` 属性，可以使用 `for...of` 遍历。
