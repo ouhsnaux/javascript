@@ -51,10 +51,4 @@
 用户代码调用库，用户掌控全局，库提供工具。
 而框架调用用户代码，用户代码按照框架定义去写，框架掌控全局。
 
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript>
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy>
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect>
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain>
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes>
-
-Advanced
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>
