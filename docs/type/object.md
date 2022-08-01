@@ -138,8 +138,9 @@ class Student extends Person {
 }
 ```
 
-* `#` 表示私有
+* `#` 表示私有，只能通过公共方法访问
 * `static` 表示静态，甚至可以添加静态块（立即执行函数）
+* 静态私有属性和方法只能通过静态公有方法使用，访问静态私有属性和方法时不要使用this
 
 ### 7个属性和方法
 
@@ -180,8 +181,6 @@ class Person() {
 2. 其它根据插入顺序
 
 ## JSON
-
-<https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes>
 
 ## Iterable
 

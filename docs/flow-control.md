@@ -97,25 +97,24 @@ function generate(quota) {
 }
 ```
 
-2. 返回
-
 ## 前端执行机制
 
-任务队列插入任务的情况
+消息队列插入任务的情况
 
 * 程序开始执行
-* setTimeout/setInterval
 * 事件触发
+* setTimeout/setInterval
 
-事件循环机制
+事件循环机制，
 
-* 执行事件队列的第一个
-* 执行完毕后执行微任务队列的 所有任务
+* 不断等待消息队列有消息，有消息则执行下一步
+* 取出消息队列的第一个，每个消息对应一个函数，执行该函数，并进入函数调用栈
+* 执行微任务队列的所有任务
 * requestAnimationFrame
 * 排列和渲染
 * 执行事件队列的下一个
 
-三种事件循环，window, worker, worklet
+三种事件循环，window(跨域iframe), worker, worklet
 
 ## Iterator
 
@@ -125,8 +124,14 @@ function generate(quota) {
   }
 }
 
+async iterator
+
 ## generator
 
 function* generatorFunc() { yield xxx; }
 
 next传值为yield接受值
+
+yield*
+
+async generator, for await...of
