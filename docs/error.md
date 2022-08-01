@@ -6,3 +6,5 @@
 * `error.name, error.message`
 
 * `unhandledrejection`
+
+* `window.onError`
