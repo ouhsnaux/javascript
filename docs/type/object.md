@@ -185,3 +185,12 @@ class Person() {
 ## Iterable
 
 包含 `Symbol.iterator` 属性，可以使用 `for...of` 遍历。
+
+## 赋值
+
+myObject上不存在foo属性，但存在原型链上层时
+`myObject.foo = 'bar';` 的三种情况与处理方式
+
+1. 如果在 `[[Prototype]]` 上层`foo` 属性未被标记只读，则会在myObject中添加一个名为 `foo` 的新属性。最常见
+2. 如果 `foo` 被标记为只读，则无法修改和添加属性，严格模式下还会报错
+3. 如果 `foo` 是`setter` 属性，一定会调用该 `setter`。不会在 `myObject` 中创建新属性，也不会修改`setter` 本身
