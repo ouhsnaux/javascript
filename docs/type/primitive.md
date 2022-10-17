@@ -81,3 +81,4 @@
 
 * typeof
 * Object.prototype.toString.call()
+* instance of
